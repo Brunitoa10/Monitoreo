@@ -1,0 +1,11 @@
+[
+  {"Name": "Google DNS Primary", "Site": "Public Internet", "IPAddress": "8.8.8.8", "Type": "DNS"},
+  {"Name": "Cloudflare DNS Primary", "Site": "Public Internet", "IPAddress": "1.1.1.1", "Type": "DNS"},
+  {"Name": "Quad9 DNS Primary", "Site": "Public Internet", "IPAddress": "9.9.9.9", "Type": "DNS"},
+  {"Site": "OpenDNS", "IPAddress": "208.67.222.222", "Type": "DNS"},
+  {"Site": "Verisign", "IPAddress": "64.6.64.6", "Type": "DNS"},
+  {"Site": "Level3", "IPAddress": "4.2.2.2", "Type": "DNS"},
+  {"Name": "Cloudflare DNS Secondary", "Site": "Public Internet", "IPAddress": "1.0.0.1", "Type": "DNS"},
+  {"Name": "Google DNS Secondary", "Site": "Public Internet", "IPAddress": "8.8.4.4", "Type": "DNS"},
+  {"Name": "Quad9 DNS Secondary", "Site": "Public Internet", "IPAddress": "149.112.112.112", "Type": "DNS"}
+]

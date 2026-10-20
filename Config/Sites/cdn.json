@@ -1,0 +1,6 @@
+[
+  {"Site": "Cloudflare", "IPAddress": "104.16.132.229", "Type": "CDN"},
+  {"Name": "Cloudflare CDN", "Site": "Public Internet", "IPAddress": "www.cloudflare.com", "Type": "CDN"},
+  {"Name": "jsDelivr CDN", "Site": "Public Internet", "IPAddress": "cdn.jsdelivr.net", "Type": "CDN"},
+  {"Name": "Google Fonts CDN", "Site": "Public Internet", "IPAddress": "fonts.googleapis.com", "Type": "CDN"}
+]

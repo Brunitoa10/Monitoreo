@@ -1,0 +1,5 @@
+[
+  {"Name": "Cloudflare Resolver", "Site": "Public Internet", "IPAddress": "1.1.1.1", "Type": "Printer"},
+  {"Name": "Google Resolver", "Site": "Public Internet", "IPAddress": "8.8.8.8", "Type": "Printer"},
+  {"Name": "Quad9 Resolver", "Site": "Public Internet", "IPAddress": "9.9.9.9", "Type": "Printer"}
+]

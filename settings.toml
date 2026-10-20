@@ -1,0 +1,79 @@
+# =====================================================================
+#  Nemesis Monitor - configuración
+#  Las rutas son relativas a la carpeta de este archivo.
+# =====================================================================
+
+[app]
+name = "Nemesis Monitor"
+organization = "Operaciones IT"
+
+[ui]
+mode = "app"          # app = ventana propia (Edge modo app) | web = pestaña del navegador
+host = "127.0.0.1"    # sólo accesible desde esta PC. "0.0.0.0" = visible en la red (pide firewall)
+port = 8501           # si está ocupado se usa el siguiente libre
+
+[inventory]
+backend = "json"      # json = archivos por sector en devices_dir | sqlite = tabla en la base
+                      # (se puede cambiar desde Administración → Organización, copiando los datos)
+
+[paths]
+devices_dir = "Config/Sites"        # JSON de dispositivos (misma estructura de siempre)
+database    = "data/nemesis.db"     # histórico de mediciones (SQLite)
+reports_dir = "reports"             # PDF / Excel / Power BI generados
+logs_dir    = "Logs/Python"
+backups_dir = "Config/_backups"     # copia automática antes de cada cambio desde el panel admin
+admin_file  = "data/admin.json"     # usuario/clave del panel (hash PBKDF2)
+
+[collector]
+interval_seconds = 30     # cada cuánto se chequea todo el inventario
+max_workers      = 32     # chequeos en paralelo
+embedded         = true   # true = el dashboard también recolecta (un solo comando para todo)
+retention_days   = 90     # se purgan mediciones más viejas
+confirm_cycles   = 2      # ciclos seguidos con falla antes de abrir incidente (anti-flapping)
+
+[probe]
+mode                        = "system"   # system = ping/tracert reales | simulated = demo sin red
+ping_count                  = 3          # paquetes por chequeo (permite medir pérdida y jitter)
+ping_timeout_ms             = 800
+traceroute_enabled          = true
+traceroute_interval_minutes = 60         # saltos reales (tracert) cada N minutos
+traceroute_max_hops         = 20
+traceroute_timeout_ms       = 500
+
+# Umbrales para marcar un equipo como "Degradado" aunque responda.
+[thresholds.default]
+latency_warning_ms = 100
+loss_warning_pct   = 34
+jitter_warning_ms  = 50
+
+[thresholds.Enlace]
+latency_warning_ms = 40
+
+[thresholds.Switch]
+latency_warning_ms = 50
+
+# Tipos / sectores. Además de los predefinidos (Switch, Carteleria, Printer, UPS, Enlace,
+# Router, AP, Camara, Servidor, PC) podés sumar alias o tipos nuevos, ej.:
+#   [types.Reloj]
+#   label   = "Relojes de fichaje"
+#   file    = "relojes.json"
+#   aliases = ["reloj", "fichador", "biometrico"]
+#
+# Chequeo de servicio TCP además del ping (opcional). Si el puerto no abre -> Degradado.
+[types.Printer]
+tcp_ports = []        # ej: [9100] para verificar el servicio de impresión RAW
+
+[types.Carteleria]
+tcp_ports = []        # ej: [5900] si las PCs tienen VNC
+
+# Equivalencias de sitios conocidas (además de la detección automática de nombres parecidos)
+[validation]
+site_aliases = {}     # ej: { "CC" = "Casa Central" }
+
+[notifications]
+webhook_url     = ""  # URL de "Incoming Webhook" de Teams o Slack (vacío = desactivado)
+notify_on_open  = true
+notify_on_close = true
+
+[admin]
+session_minutes = 30

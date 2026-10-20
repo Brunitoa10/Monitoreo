@@ -1,0 +1,4 @@
+[
+  {"Name": "GitHub API", "Site": "Public Internet", "IPAddress": "api.github.com", "Type": "AP"},
+  {"Name": "npm Registry", "Site": "Public Internet", "IPAddress": "registry.npmjs.org", "Type": "AP"}
+]

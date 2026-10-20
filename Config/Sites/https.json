@@ -1,0 +1,10 @@
+[
+  {"Name": "Google Web", "Site": "Public Internet", "IPAddress": "www.google.com", "Type": "HTTPS"},
+  {"Name": "Cloudflare Web", "Site": "Public Internet", "IPAddress": "www.cloudflare.com", "Type": "HTTPS"},
+  {"Name": "GitHub", "Site": "Public Internet", "IPAddress": "github.com", "Type": "HTTPS"},
+  {"Name": "Microsoft", "Site": "Public Internet", "IPAddress": "www.microsoft.com", "Type": "HTTPS"},
+  {"Name": "Wikipedia", "Site": "Public Internet", "IPAddress": "www.wikipedia.org", "Type": "HTTPS"},
+  {"Name": "Amazon Web Services", "Site": "Public Internet", "IPAddress": "aws.amazon.com", "Type": "HTTPS"},
+  {"Name": "GitLab", "Site": "Public Internet", "IPAddress": "gitlab.com", "Type": "HTTPS"},
+  {"Name": "Docker Hub", "Site": "Public Internet", "IPAddress": "hub.docker.com", "Type": "HTTPS"}
+]

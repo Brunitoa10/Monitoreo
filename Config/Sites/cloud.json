@@ -1,0 +1,7 @@
+[
+  {"Name": "Google Cloud", "Site": "Public Cloud", "IPAddress": "cloud.google.com", "Type": "Cloud"},
+  {"Name": "Microsoft Azure", "Site": "Public Cloud", "IPAddress": "azure.microsoft.com", "Type": "Cloud"},
+  {"Name": "Amazon AWS Console", "Site": "Public Cloud", "IPAddress": "console.aws.amazon.com", "Type": "Cloud"},
+  {"Name": "DigitalOcean", "Site": "Public Cloud", "IPAddress": "www.digitalocean.com", "Type": "Cloud"},
+  {"Name": "Oracle Cloud", "Site": "Public Cloud", "IPAddress": "www.oracle.com", "Type": "Cloud"}
+]

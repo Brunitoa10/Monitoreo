@@ -1,0 +1,12 @@
+# Python 3.11 o superior
+streamlit>=1.50
+pandas>=2.1
+numpy>=1.26
+plotly>=5.20
+openpyxl>=3.1
+reportlab>=4.0
+matplotlib>=3.8
+pywebview>=5.0   # ventana nativa (Windows: usa WebView2, incluido en Windows 10/11)
+
+# desarrollo
+pytest>=8.0
